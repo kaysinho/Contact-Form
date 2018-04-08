@@ -1,0 +1,123 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('/images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form{
+    background: #ffffff;
+    width: 520px;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+input, textarea{
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-title{
+    text-align: center;
+    margin-top: 25px;
+    color:#009999;
+}
+
+a{
+    font-weight: bold;
+    color:#009999;
+    text-decoration: none;
+}
+
+.form-info{
+    text-align: center;
+    margin-top: 35px;
+    color: rgba(0,0,0,0.7);
+}
+
+.form-input, .form-label, .form-submit, .form-area{
+    display: block;
+    width: 100%;
+    font-size: 1em;   
+}
+
+.form-input, .form-area{
+    margin-bottom: 60px;
+    z-index: 40;
+    border: 1.2px solid;
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+    border-color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.form-input:focus, .form-area:focus{
+    outline-width: 0;
+    border: 1.5px solid;
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+    border-color:#009999;
+}
+
+
+.form-input:focus + .form-label{
+    font-weight: bold;
+    margin-top: -110px;
+    color:#009999;
+    font-size: 0.8em;
+}
+
+.form-area:focus + .form-label-area{
+    font-weight: bold;
+    margin-top: -120px;
+    color:#009999;
+    font-size: 0.8em;
+}
+
+.form-label, .form-label-area{
+    position: absolute;
+    margin-top: -90px;
+    z-index: 10;
+    color: rgba(0, 0, 0, 0.5);
+    transition: all 0.2s;
+}
+
+.form-submit{
+    background: #009999;
+    color:white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border:none;
+    transition: all 0.2s;
+    height: 50px;
+}
+
+.form-submit:hover{
+    transition: all 0.2s;
+    background: #004d4d;
+}
+
+.still{
+    margin-top: -110px;
+    font-size: 0.8em;
+}
+
+.still-area{
+    margin-top: -120px;
+    font-size: 0.8em;
+}
+
+textarea {
+    resize: none;
+}
