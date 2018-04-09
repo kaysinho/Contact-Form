@@ -1,3 +1,22 @@
+@media (max-width: 900px) {
+    body{
+        background: #009999;
+        background-image: none;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .form{
+        background: #ffffff;
+        width: 520px;
+        max-width: 100%;
+        margin: auto;
+        margin-top: 30px;
+        padding: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+  }
 
 *{
     box-sizing: border-box;
@@ -11,7 +30,6 @@ body{
     margin:0;
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
-
 }
 
 .form{
