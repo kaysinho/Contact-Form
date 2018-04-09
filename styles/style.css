@@ -5,10 +5,13 @@
 
 body{
     background-image: url('../images/background.jpg');
-    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
     margin:0;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+
 }
 
 .form{
