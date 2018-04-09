@@ -2,37 +2,79 @@
 <html lang="es">
 
 <head>
-    <title>Contact Form - by Jhonantan Plata</title>
+    <title>Contact Form</title>
     <meta charset="UTF-8" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="styles/style.css?cache=V2">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<body>
-        
-    <form class="form">
+<body class="">
+    <!-- Form -->
+    <form class="form fadeIn fast" id="contact_form" name="contact_form" onsubmit="return false">
 
-        <h1 class="form-title">Contáctenos</h1>
+        <!-- Form Title-->
+        <h1 class="form-title ">Contáctenos</h1>
 
-        <input class="form-input" type="text" required/>
-        <label for="" class="form-label">Nombre</label>
+        <!-- Field Name-->
+        <input class="form-input" type="text" name="name" id="name" maxlength="60" required/>
+        <label for="" class="form-label animated fadeIn">Nombre</label>
 
-        <input class="form-input" type="email" required/>
-        <label for="" class="form-label">Email</label>
+        <!-- Field Email-->
+        <input class="form-input" type="email" name="email" id="email" maxlength="60" required/>
+        <label for="" class="form-label animated fadeIn">Email</label>
 
-        <input class="form-input" type="phone" required/>
-        <label for="" class="form-label">Telefono</label>
+        <!-- Field Cellphone-->
+        <input class="form-input" type="text" onkeypress="return soloNumeros(event);" name="cellphone" id="cellphone" minlength="10"
+            maxlength="10" required/>
+        <label for="" class="form-label animated fadeIn">Telefono</label>
 
-        <textarea class="form-area" required></textarea>
-        <label for="" class="form-label-area">Mensaje</label>
+        <!-- Field Message-->
+        <textarea class="form-area" name="message" id="message" required></textarea>
+        <label for="" class="form-label-area animated fadeIn">Mensaje</label>
 
-        <input class="form-submit" type="submit"/>
+        <!-- Send Button-->
+        <input class="form-submit" type="submit" onclick="addMessage()" value="Enviar" />
 
-        <p class="form-info">Designed by <a href="https://www.linkedin.com/in/jhonantan-plata/" target="_blank" title="Colorlib">Jhonantan Plata</a></p>
+        <p class="form-info">Designed by
+            <a href="https://www.linkedin.com/in/jhonantan-plata/" target="_blank" title="Colorlib">Jhonantan Plata</a>
+        </p>
     </form>
-    <script src="src/script.js"></script>
+
+    <!-- Loading Modal -->
+    <div id="Loading-Modal" class="modal animated fadeIn">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" id="close-loading">&times;</span>
+            <img src="images/loading.gif" width="300px" />
+            <h2>Enviando...</h2>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="Success-Modal" class="modal animated fadeIn">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" id="close-success">&times;</span>
+            <h2>Mensaje enviado!</h2>
+            <p>Pronto nos contactaremos con usted...</p>
+        </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div id="Error-Modal" class="modal animated fadeIn">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" id="close-error">&times;</span>
+            <h2 class="error">Error al enviar el mensaje!</h2>
+            <p>En este momento tenemos una falla, por favor intente mas tarde...</p>
+        </div>
+    </div>
+
+    <script src="src/script.js?cache=V2"></script>
+    <script src="src/message.js?cache=V2"></script>
 </body>
 
 </html>
