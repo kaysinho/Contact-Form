@@ -48,6 +48,7 @@ class Message {
 
 			$_mailer->send("jessica.vasquez@intermediosdigital.com", "Formulario de Contacto", $name, $email, $content);
 			$_mailer->send("kaysinho@gmail.com", "Formulario de Contacto", $name, $email, $content);
+			$_mailer->send($email, "Copia de envío", $name, $email, $content);
 			
 			return '{"status":"success","message":"Message sended"}';
 		}else{
