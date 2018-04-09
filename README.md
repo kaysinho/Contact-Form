@@ -20,5 +20,5 @@ Requiere apache PHP V7, MySql
 - Ejecutar el servicio de Apache y MySql de su servidor
 
 ## Nota
-Para que el envío de email sea exitoso, debe subir el proyecto a un hosting, o en su defecto realizar la configuración necesaria de envío de emails en su servidor
+Para que el envío de email sea exitoso, debe subir el proyecto a un hosting, o en su defecto realizar la configuración necesaria de envío de emails en su servidor local, por ejemplo con sendgrid.
 
